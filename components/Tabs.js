@@ -12,7 +12,7 @@
 
 
 axios.get('https://lambda-times-api.herokuapp.com/topics')
-    .then(res=>topics(res))
+    .then(res=>{console.log(res);topics(res)})
     .catch(err=>console.log('this is an error message'))
 
 

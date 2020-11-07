@@ -54,6 +54,10 @@ function articleCard(article){
     const articleContainer = document.querySelector('.cards-container')
     articleContainer.appendChild(cardContainer)
 
+    cardContainer.addEventListener('click',()=>
+    
+    console.log(article.headline))
+
     //headline div
     const headline = document.createElement('div')
     headline.className = 'headline'
