@@ -25,6 +25,7 @@ import axios from 'axios'
 
 axios.get(`https://lambda-times-api.herokuapp.com/articles`)
     .then(res => {
+        
         const bootstrap = res.data.articles.bootstrap
         const javascript = res.data.articles.javascript
         const technology = res.data.articles.technology
@@ -49,7 +50,6 @@ axios.get(`https://lambda-times-api.herokuapp.com/articles`)
     const card = document.createElement('div')
     card.className = 'card'
     container.appendChild(card)
-    
     
 
     //headlin
@@ -79,7 +79,7 @@ axios.get(`https://lambda-times-api.herokuapp.com/articles`)
     authorDiv.appendChild(authorName)
 
 
-    //event
+    //event listener prints headline to console
     card.addEventListener('click',()=>{console.log(article.headline)})
 
     return card
